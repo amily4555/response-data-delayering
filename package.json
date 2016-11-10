@@ -52,6 +52,7 @@
         "type": "git",
         "url": "git+https://github.com/amily4555/response-data-delayering.git"
     },
+    "main": "index.js",
     "author": "Mizi Lin",
     "license": "MIT",
     "bugs": {
