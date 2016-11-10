@@ -1,5 +1,5 @@
 {
-    "name": "Response-data-delayering",
+    "name": "response-data-delayering",
     "version": "0.0.1",
     "description": "Resetful response data delayering",
     "dependencies": {
