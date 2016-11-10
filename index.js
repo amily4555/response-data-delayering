@@ -1,2 +1,2 @@
 require('./app/delayering');
-module.exports = dalayering;
+module.exports = delayering;

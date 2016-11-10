@@ -1,4 +1,10 @@
-import mu from "mzmu";
+/**
+ * 单独使用必须引用 mzmu
+ *
+ * mpm install mzmu --save-dev
+ * import mu from 'mzmu'
+ */
+
 
 ((mu) => {
 
@@ -53,7 +59,7 @@ import mu from "mzmu";
         });
 
         // 首字符小写
-        rst.modelsGroup = mu.map(modelsGroup, (v) => {
+        rst.modelGroup = mu.map(modelsGroup, (v) => {
             return v.replace(/^([A-Z])/, function(m, i) {
                 return m.toLowerCase() || i;
             })
@@ -78,7 +84,6 @@ import mu from "mzmu";
 
         for(let model of modelGroup) {
             if(rst = response[model]) {
-                rst['__model__'] = model;
                 return rst;
             }
         }
@@ -98,25 +103,33 @@ import mu from "mzmu";
 
             let analysis = modelAnalysis(key);
 
+
             if(analysis) {
 
-                let mapping = dataMatching(response, modelGroup);
+                let mapping = dataMatching(response, analysis.modelGroup);
 
-                if(analysis.isIds) {
+                if(mapping){
 
-                    obj[analysis.name] = [];
+                    if(analysis.isIds) {
 
-                    for(let id of v) {
+                        obj[analysis.name] = [];
 
-                        obj[analysis.name].push(mapping[v] || v);
+                        for(let id of v) {
+
+                            obj[analysis.name].push(mapping[v] || v);
+
+                        }
+
+                    } else {
+
+                        obj[analysis.name] = mapping[v];
 
                     }
 
-                } else {
-
-                    obj[analysis.name] = mapping[v];
-
                 }
+
+
+
 
             }
         });
@@ -133,7 +146,8 @@ import mu from "mzmu";
         let data;
 
         if(mu.isObject(response)
-            && (data = response.data)) {
+
+            && (data = mu.copy(response.data))) {
 
             if(mu.isObject(data)){
                 response = dataMapping(response, data);
@@ -141,11 +155,10 @@ import mu from "mzmu";
 
             if(mu.isArray(data)){
 
-                data = mu.map(data, function(obj){
-                    return dataMapping(response, data);
+                response.data = mu.map(data, function(obj){
+                    // console.debug(dataMapping(response, obj));
+                    return dataMapping(response, obj);
                 });
-
-                response.data = data;
 
             }
 
@@ -156,11 +169,4 @@ import mu from "mzmu";
 
 
 })(mu);
-
-
-
-
-
-
-
 
