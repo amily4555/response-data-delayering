@@ -1,0 +1,132 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/Cellar/node/5.3.0/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'publish' ]
+2 info using npm@3.3.12
+3 info using node@v5.3.0
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/Users/Mizi/git/delayering',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/Mizi/.npm/response-data-delayering/0.0.4/package.tgz not in flight; packing
+9 info lifecycle response-data-delayering@0.0.4~prepublish: response-data-delayering@0.0.4
+10 silly lifecycle response-data-delayering@0.0.4~prepublish: no script for prepublish, continuing
+11 verbose tar pack [ '/Users/Mizi/.npm/response-data-delayering/0.0.4/package.tgz',
+11 verbose tar pack   '/Users/Mizi/git/delayering' ]
+12 verbose tarball /Users/Mizi/.npm/response-data-delayering/0.0.4/package.tgz
+13 verbose folder /Users/Mizi/git/delayering
+14 verbose addLocalTarball adding from inside cache /Users/Mizi/.npm/response-data-delayering/0.0.4/package.tgz
+15 silly cache afterAdd response-data-delayering@0.0.4
+16 verbose afterAdd /Users/Mizi/.npm/response-data-delayering/0.0.4/package/package.json not in flight; writing
+17 verbose afterAdd /Users/Mizi/.npm/response-data-delayering/0.0.4/package/package.json written
+18 silly publish { name: 'response-data-delayering',
+18 silly publish   version: '0.0.4',
+18 silly publish   description: 'Resetful response data delayering',
+18 silly publish   dependencies: {},
+18 silly publish   devDependencies:
+18 silly publish    { 'babel-core': '^6.4.5',
+18 silly publish      'babel-loader': '^6.2.1',
+18 silly publish      'babel-preset-es2015': '^6.3.13',
+18 silly publish      'babel-register': '^6.4.3',
+18 silly publish      'copy-webpack-plugin': '~3.0.1',
+18 silly publish      'cross-env': '^3.1.3',
+18 silly publish      'css-loader': '^0.19.0',
+18 silly publish      'extract-text-webpack-plugin': '^1.0.1',
+18 silly publish      'html-webpack-plugin': '^2.24.1',
+18 silly publish      'isparta-loader': '^2.0.0',
+18 silly publish      jasmine: '^2.4.1',
+18 silly publish      karma: '^0.13.19',
+18 silly publish      'karma-chrome-launcher': '^0.2.0',
+18 silly publish      'karma-coverage': '^0.5.3',
+18 silly publish      'karma-jasmine': '^0.3.6',
+18 silly publish      'karma-jasmine-html-reporter': '^0.2.0',
+18 silly publish      'karma-sourcemap-loader': '^0.3.7',
+18 silly publish      'karma-webpack': '^1.7.0',
+18 silly publish      mzmu: '^1.8.1',
+18 silly publish      'raw-loader': '^0.5.1',
+18 silly publish      'style-loader': '^0.12.2',
+18 silly publish      'stylus-loader': '^1.5.8',
+18 silly publish      webpack: '~1.13.1',
+18 silly publish      'webpack-dev-server': '^1.14.1',
+18 silly publish      'webpack-md5-hash': '0.0.5' },
+18 silly publish   scripts:
+18 silly publish    { test: 'karma start',
+18 silly publish      serve: 'webpack-dev-server --content-base client/ --progress --colors --inline --open',
+18 silly publish      server: 'cross-env NODE_ENV=development nodemon -w \'server/**/*.*\' ./server/main.js',
+18 silly publish      'server:dev': 'cross-env NODE_ENV=development webpack-dev-server --progress',
+18 silly publish      'server:test': 'cross-env NODE_ENV=test webpack-dev-server --progress',
+18 silly publish      'server:prod': 'cross-env NODE_ENV=production webpack-dev-server --progress',
+18 silly publish      start: 'npm run server:dev',
+18 silly publish      build: 'cross-env NODE_ENV=production webpack --display-chunks --progress' },
+18 silly publish   keywords: [ 'restful', 'response data', 'delayering', 'webpack', 'es6' ],
+18 silly publish   repository:
+18 silly publish    { type: 'git',
+18 silly publish      url: 'git+https://github.com/amily4555/response-data-delayering.git' },
+18 silly publish   main: 'index.js',
+18 silly publish   author: { name: 'Mizi Lin' },
+18 silly publish   license: 'MIT',
+18 silly publish   bugs: { url: 'https://github.com/amily4555/response-data-delayering.git/issues' },
+18 silly publish   homepage: 'https://github.com/amily4555/response-data-delayering.git#readme',
+18 silly publish   readme: '## 扁平式数据处理程序',
+18 silly publish   readmeFilename: 'README.md',
+18 silly publish   gitHead: 'c37af28952d529005cf1b642f7ad20af4b4058d0',
+18 silly publish   _id: 'response-data-delayering@0.0.4',
+18 silly publish   _shasum: 'd59b98e169b0f18361ad7adb4384c7553d6f8163',
+18 silly publish   _from: '.' }
+19 verbose getPublishConfig undefined
+20 silly mapToRegistry name response-data-delayering
+21 silly mapToRegistry using default registry
+22 silly mapToRegistry registry https://registry.npmjs.org/
+23 silly mapToRegistry uri https://registry.npmjs.org/response-data-delayering
+24 verbose publish registryBase https://registry.npmjs.org/
+25 silly publish uploading /Users/Mizi/.npm/response-data-delayering/0.0.4/package.tgz
+26 verbose request uri https://registry.npmjs.org/response-data-delayering
+27 verbose request sending authorization for write operation
+28 info attempt registry request try #1 at 14:31:18
+29 verbose request using bearer token for auth
+30 verbose request id b8f9c7e10a02294b
+31 http request PUT https://registry.npmjs.org/response-data-delayering
+32 http 403 https://registry.npmjs.org/response-data-delayering
+33 verbose headers { 'content-type': 'application/json',
+33 verbose headers   'cache-control': 'max-age=300',
+33 verbose headers   'content-length': '95',
+33 verbose headers   'accept-ranges': 'bytes',
+33 verbose headers   date: 'Mon, 09 Jan 2017 06:31:18 GMT',
+33 verbose headers   via: '1.1 varnish',
+33 verbose headers   connection: 'keep-alive',
+33 verbose headers   'x-served-by': 'cache-nrt6126-NRT',
+33 verbose headers   'x-cache': 'MISS',
+33 verbose headers   'x-cache-hits': '0',
+33 verbose headers   'x-timer': 'S1483943477.777872,VS0,VE602',
+33 verbose headers   vary: 'Accept-Encoding' }
+34 verbose request invalidating /Users/Mizi/.npm/registry.npmjs.org/response-data-delayering on PUT
+35 error publish Failed PUT 403
+36 verbose stack Error: "You cannot publish over the previously published version 0.0.4." : response-data-delayering
+36 verbose stack     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+36 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:252:14)
+36 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+36 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:198:22)
+36 verbose stack     at emitTwo (events.js:87:13)
+36 verbose stack     at Request.emit (events.js:172:7)
+36 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1082:10)
+36 verbose stack     at emitOne (events.js:82:20)
+36 verbose stack     at Request.emit (events.js:169:7)
+36 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1009:12)
+37 verbose statusCode 403
+38 verbose pkgid response-data-delayering
+39 verbose cwd /Users/Mizi/git/delayering
+40 error Darwin 15.3.0
+41 error argv "/usr/local/Cellar/node/5.3.0/bin/node" "/usr/local/bin/npm" "publish"
+42 error node v5.3.0
+43 error npm  v3.3.12
+44 error code E403
+45 error "You cannot publish over the previously published version 0.0.4." : response-data-delayering
+46 error If you need help, you may report this error at:
+46 error     <https://github.com/npm/npm/issues>
+47 verbose exit [ 1, true ]
